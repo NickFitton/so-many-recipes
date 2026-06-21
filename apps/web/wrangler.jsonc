@@ -3,5 +3,11 @@
   "name": "so-many-recipes-web",
   "compatibility_date": "2025-09-02",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "@tanstack/react-start/server-entry"
+  "main": "@tanstack/react-start/server-entry",
+  "vars": {
+    "VITE_CLERK_SIGN_IN_URL": "/sign-in",
+    "VITE_CLERK_SIGN_UP_URL": "/sign-up",
+    "VITE_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL": "/",
+    "VITE_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL": "/"
+  }
 }
