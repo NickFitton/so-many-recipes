@@ -1,3 +1,5 @@
+import { shadcn } from "@clerk/ui/themes"
+import { ClerkProvider } from "@clerk/tanstack-react-start"
 import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router"
 
 import appCss from "@workspace/ui/globals.css?url"
@@ -39,8 +41,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        {children}
-        <Scripts />
+        <ClerkProvider appearance={{ theme: shadcn }}>
+          {children}
+          <Scripts />
+        </ClerkProvider>
       </body>
     </html>
   )
